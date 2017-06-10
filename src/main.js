@@ -5,9 +5,11 @@ import fastclick from 'fastclick'
 fastclick.attach(document.body)
 
 import 'common/stylus/index.styl'
+import router from './router'
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router
 })
