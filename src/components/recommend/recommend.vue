@@ -1,7 +1,7 @@
 <template>
   <div class="recommend">
     <div class="recommend-content">
-      <div class="recommend-wrapper">
+      <div v-if="recommends.length" class="recommend-wrapper">
         <slider>
           <div v-for="item in recommends">
             <a :href="item.linkUrl">
@@ -52,6 +52,7 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable"
+
   .recommend
     position: fixed
     width: 100%
