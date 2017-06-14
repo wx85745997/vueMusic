@@ -10,11 +10,11 @@
           </div>
         </slider>
       </div>
-    </div>
-    <div class="recommend-list">
-      <h1 class="list-title">热门歌单推荐</h1>
-      <ul>
-      </ul>
+      <div class="recommend-list">
+        <h1 class="list-title">热门歌单推荐</h1>
+        <ul>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -31,13 +31,12 @@
       }
     },
     created () {
-      this._getRcommend()
+      this._getRecommend()
     },
     methods: {
-      _getRcommend () {
+      _getRecommend() {
         getRecommend().then((res) => {
           if (res.code === ERR_OK) {
-            console.log(res.data.slider)
             this.recommends = res.data.slider
           }
         })
